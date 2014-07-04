@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jstl/core_rt" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <page:show id="ps_com_roo_pizzashop_domain_Base" object="${base}" path="/bases" z="nan9KRKReFkZp4b/ePJNI5hIJpk=">
-        <field:display field="name" id="s_com_roo_pizzashop_domain_Base_name" object="${base}" z="v1L8/UC25c8f96PlptUKNHW4m0U="/>
-    </page:show>
+    
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+               <td><c:out value="ID"/></td>
+               <td><c:out value="${base.id}"/></td>
+            </tr>
+            <tr>
+               <td><c:out value="Name"/></td>
+               <td><c:out value="${base.name}"/></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
